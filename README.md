@@ -101,6 +101,12 @@ entry.unpublish()
 entry= client.get_entry()
 ```
 
+何も書いてない記事はpush()できない。要は保存できない。
+```
+entry.push() # error!
+```
+
+
 # Test
 
 If you want to test, execute next commands.

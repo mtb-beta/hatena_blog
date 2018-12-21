@@ -127,6 +127,13 @@ class TestEntry(unittest.TestCase):
             'https://blog.hatena.ne.jp/' in requests_post.call_args[0][0]
         )
 
+    @mock.patch('requests.post')
+    def test_entry_empty_push(self, requests_post):
+        empty_entry = self.client.get_entry()
+        with self.assertRaises(hatena_blog.ValidationError):
+            empty_entry.push()
+        requests_post.assert_not_called()
+
     @mock.patch('requests.get')
     def test_entry_pull(self, requests_get):
         self.entry.pull()

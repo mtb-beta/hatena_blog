@@ -2,6 +2,8 @@ import requests
 
 HATENA_ATOM_ENDPOINT = "https://blog.hatena.ne.jp/{hatena_id}/{blog_id}/atom"
 
+class ValidationError(Exception):
+    pass
 
 class Entry:
     def __init__(self,
@@ -28,6 +30,8 @@ class Entry:
         self.client = client
 
     def push(self):
+        if not self.entry_id or not self.title:
+            raise ValidationError("Can't push. because entry doesn't have entry_id.")
         self.client.push_entry(self)
 
     def pull(self):
