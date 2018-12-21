@@ -96,6 +96,11 @@ entry.publish()
 entry.unpublish()
 ```
 
+こんな風に空を指定すると空の記事を作れる。
+```
+entry= client.get_entry()
+```
+
 # Test
 
 If you want to test, execute next commands.

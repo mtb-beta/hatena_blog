@@ -31,6 +31,10 @@ class TestHatenaBlogClient(unittest.TestCase):
         self.assertIsInstance(entry, hatena_blog.Entry)
         self.assertEqual(entry.entry_id, entry_id)
 
+    def test_get_entry(self):
+        entry = self.client.get_entry()
+        self.assertIsInstance(entry, hatena_blog.Entry)
+
     @mock.patch('requests.get')
     def test_pull_entry(self, requests_get):
         entry_id = "1234567890"
