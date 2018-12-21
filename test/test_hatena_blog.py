@@ -127,6 +127,9 @@ class TestEntry(unittest.TestCase):
     def test_entry_pull(self, requests_get):
         self.entry.pull()
         requests_get.assert_called_once()
+        self.assertTrue(
+            'https://blog.hatena.ne.jp/' in requests_get.call_args[0][0]
+        )
 
     @mock.patch('requests.post')
     def test_entry_unpublish(self, requests_post):
@@ -135,6 +138,9 @@ class TestEntry(unittest.TestCase):
         self.entry.unpublish()
         requests_post.assert_called_once()
         self.assertFalse(self.entry.is_public)
+        self.assertTrue(
+            'https://blog.hatena.ne.jp/' in requests_post.call_args[0][0]
+        )
 
     @mock.patch('requests.post')
     def test_entry_publish(self, requests_post):
@@ -143,3 +149,6 @@ class TestEntry(unittest.TestCase):
         self.entry.publish()
         requests_post.assert_called_once()
         self.assertTrue(self.entry.is_public)
+        self.assertTrue(
+            'https://blog.hatena.ne.jp/' in requests_post.call_args[0][0]
+        )
