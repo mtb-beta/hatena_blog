@@ -25,6 +25,11 @@ class TestHatenaBlogClient(unittest.TestCase):
         collection = self.client.get_collection()
         self.assertIsInstance(collection, hatena_blog.Collection)
 
+    def test_get_collection_by_categories(self):
+        category = "category1"
+        collection = self.client.get_collection(category=category)
+        self.assertIsInstance(collection, hatena_blog.Collection)
+
     def test_get_entry(self):
         entry_id = "1234567890"
         entry = self.client.get_entry(entry_id)

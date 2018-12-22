@@ -106,6 +106,10 @@ entry= client.get_entry()
 entry.push() # error!
 ```
 
+カテゴリの記事コレクションもとれる。
+```
+client.get_collection(category)
+```
 
 # Test
 

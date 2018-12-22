@@ -46,6 +46,9 @@ class Entry:
         self.push()
 
 class Collection:
+    def __init__(self, category=None):
+        self.category = category
+
     @property
     def entries(self):
         return [Entry()]
@@ -68,8 +71,8 @@ class Client:
         self.blog_id = blog_id
         self.api_key = api_key
 
-    def get_collection(self):
-        return Collection()
+    def get_collection(self, category=None):
+        return Collection(category=category)
 
     def get_entry(self, entry_id=None):
         return Entry(entry_id=entry_id, client=self)
