@@ -1,0 +1,4 @@
+pytest
+betamax
+python-dotenv
+betamax_serializers

@@ -1,3 +1,4 @@
+import os
 import unittest
 from unittest import mock
 import datetime
@@ -21,14 +22,26 @@ class TestHatenaBlogClient(unittest.TestCase):
     def test_client(self):
         self.assertIsInstance(self.client, hatena_blog.Client)
 
-    def test_get_collection(self):
+    @mock.patch('hatena_blog.Collection.__init__')
+    @mock.patch('requests.Session.get')
+    def test_get_collection(self, requests_get, hatena_blog_collection_init):
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = 'xml data'
+        hatena_blog_collection_init.return_value = None
         collection = self.client.get_collection()
         self.assertIsInstance(collection, hatena_blog.Collection)
+        hatena_blog_collection_init.called_once_with('xml data')
 
-    def test_get_collection_by_categories(self):
+    @mock.patch('hatena_blog.Collection.__init__')
+    @mock.patch('requests.Session.get')
+    def test_get_collection_by_categories(self, requests_get, hatena_blog_collection_init):
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = 'xml data'
+        hatena_blog_collection_init.return_value = None
         category = "category1"
         collection = self.client.get_collection(category=category)
         self.assertIsInstance(collection, hatena_blog.Collection)
+        hatena_blog_collection_init.called_once_with('xml data')
 
     def test_get_entry(self):
         entry_id = "1234567890"
@@ -59,27 +72,74 @@ class TestCollection(unittest.TestCase):
     def setUp(self):
         self.client = _get_client()
 
-    def test_collection_entries(self):
+    @mock.patch('requests.Session.get')
+    def test_collection_entries(self, requests_get):
+        """正常系"""
+        with open(
+                os.path.join(os.path.dirname(__file__),
+                'data/collection_case1.xml'), 'r') as f:
+            response_data = f.read()
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = response_data
+
         collection = self.client.get_collection()
+
         self.assertIsInstance(collection.entries, list)
         self.assertIsInstance(collection.entries[0], hatena_blog.Entry)
 
-    def test_collection_public_entries(self):
+    @mock.patch('requests.Session.get')
+    def test_collection_entries(self, requests_get):
+        """異常系"""
+        requests_get.return_value.status_code = 401
+        with self.assertRaises(hatena_blog.InvalidRequestsError):
+            collection = self.client.get_collection()
+
+    @mock.patch('requests.Session.get')
+    def test_collection_public_entries(self, requests_get):
+        """正常系"""
+        with open(
+                os.path.join(os.path.dirname(__file__),
+                'data/collection_case1.xml'), 'r') as f:
+            response_data = f.read()
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = response_data
+
         collection = self.client.get_collection()
         entries = collection.public_entries
+
         self.assertIsInstance(entries, list)
         self.assertIsInstance(entries[0], hatena_blog.Entry)
         self.assertTrue(entries[0].is_public)
 
-    def test_collection_draft_entries(self):
+    @mock.patch('requests.Session.get')
+    def test_collection_draft_entries(self, requests_get):
+        """正常系"""
+        with open(
+                os.path.join(os.path.dirname(__file__),
+                'data/collection_case1.xml'), 'r') as f:
+            response_data = f.read()
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = response_data
+
         collection = self.client.get_collection()
         entries = collection.draft_entries
+
         self.assertIsInstance(entries, list)
         self.assertIsInstance(entries[0], hatena_blog.Entry)
         self.assertFalse(entries[0].is_public)
 
-    def test_collection_next(self):
+    @mock.patch('requests.Session.get')
+    def test_collection_next(self, requests_get):
+        """正常系"""
+        with open(
+                os.path.join(os.path.dirname(__file__),
+                'data/collection_case1.xml'), 'r') as f:
+            response_data = f.read()
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = response_data
+
         collection = self.client.get_collection()
+
         self.assertIsInstance(collection.next, hatena_blog.Collection)
 
 
