@@ -86,7 +86,7 @@ class TestEntry(unittest.TestCase):
         self.entry.content='sample content'
         self.entry.content_type='sample content_type'
         self.entry.is_public=True
-        self.entry.tags=['tag1', 'tag2']
+        self.entry.categories=['category1', 'category2']
         self.entry.publish_date=datetime.datetime.now()
         self.entry.update_date=datetime.datetime.now()
         self.entry.url='https://hatenablog.com'
@@ -104,8 +104,8 @@ class TestEntry(unittest.TestCase):
     def test_entry_is_public(self):
         self.assertTrue(self.entry.is_public)
 
-    def test_entry_tags(self):
-        self.assertEqual(self.entry.tags, ['tag1', 'tag2'])
+    def test_entry_categories(self):
+        self.assertEqual(self.entry.categories, ['category1', 'category2'])
 
     def test_entry_publish_date(self):
         self.assertIsInstance(self.entry.publish_date, datetime.datetime)

@@ -70,7 +70,7 @@ entry.title
 entry.content
 entry.content_type
 entry.is_public
-entry.tags
+entry.categories
 entry.publish_date
 entry.update_date
 entry.url

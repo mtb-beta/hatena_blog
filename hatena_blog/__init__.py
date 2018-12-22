@@ -12,7 +12,7 @@ class Entry:
             content_type=None,
             is_public=False,
             entry_id=None,
-            tags=[],
+            categories=[],
             publish_date=None,
             update_date=None,
             url=None,
@@ -21,7 +21,7 @@ class Entry:
         self.title = title
         self.content = content
         self.content_type = content_type
-        self.tags = tags
+        self.categories = categories
         self.is_public = is_public
         self.entry_id = entry_id
         self.publish_date = publish_date
