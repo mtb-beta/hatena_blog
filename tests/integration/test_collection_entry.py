@@ -56,4 +56,28 @@ class TestSenarioCollectEntry(unittest.TestCase):
 
             self.assertNotEqual(entries, next_entries)
 
+    def test_get_next_to_end(self):
+        with self.recorder.use_cassette('test_get_next_to_end', serialize_with='prettyjson'):
+            first_collection = self.client.get_collection()
+            second_collection = first_collection.next
+            self.assertTrue(second_collection)
 
+            third_collection = second_collection.next
+            self.assertTrue(third_collection)
+
+            fourth_collection = third_collection.next
+            self.assertFalse(fourth_collection)
+
+    def test_get_category_collection(self):
+        with self.recorder.use_cassette('test_get_category_collection', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
+            entries = collection.category_entries('Python')
+            self.assertTrue(len(entries) > 0)
+            for entry in entries:
+                self.assertTrue('Python' in entry.categories)
+
+    def test_get_unknown_category_collection(self):
+        with self.recorder.use_cassette('test_get_category_collection', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
+            entries = collection.category_entries('Ruby')
+            self.assertFalse(entries)

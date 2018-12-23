@@ -20,7 +20,6 @@ class Entry:
             content_type=None,
             is_public=False,
             entry_id=None,
-            categories=[],
             publish_date=None,
             update_date=None,
             public_url=None,
@@ -30,7 +29,7 @@ class Entry:
         self.title = title
         self.content = content
         self.content_type = content_type
-        self.categories = categories
+        self.categories = []
         self.is_public = is_public
         self.entry_id = entry_id
         self.publish_date = publish_date
@@ -110,6 +109,9 @@ class Collection:
     @property
     def draft_entries(self):
         return [ entry for entry in self.entries if not entry.is_public]
+
+    def category_entries(self, category):
+        return [ entry for entry in self.entries if category in entry.categories]
 
     @property
     def next(self):
