@@ -94,11 +94,11 @@ class Collection:
 
     @property
     def public_entries(self):
-        return [Entry(is_public=True)]
+        return [ entry for entry in self.entries if entry.is_public]
 
     @property
     def draft_entries(self):
-        return [Entry(is_public=False)]
+        return [ entry for entry in self.entries if not entry.is_public]
 
     @property
     def next(self):
