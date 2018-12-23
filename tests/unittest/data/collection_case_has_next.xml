@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>\n<feed
+xmlns="http://www.w3.org/2005/Atom"\n
+xmlns:app="http://www.w3.org/2007/app">\n\n  <link rel="first"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry"
+/>\n\n  \n\n
+<title>hatena_blog\xe9\x96\x8b\xe7\x99\xba\xe7\x94\xa8\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe3\x82\xa2\xe3\x82\xab\xe3\x82\xa6\xe3\x83\xb3\xe3\x83\x88</title>\n
+\n
+<subtitle>hatena_blog\xe9\x96\x8b\xe7\x99\xba\xe7\x94\xa8\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe3\x82\xa2\xe3\x82\xab\xe3\x82\xa6\xe3\x83\xb3\xe3\x83\x88\xe3\x81\xa7\xe3\x81\x99\xe3\x80\x82</subtitle>\n
+\n  <link rel="alternate" href="https://example-blog.hatenadiary.com/"/>\n
+<updated>2018-12-23T02:22:20+09:00</updated>\n  <author>\n
+<name>example_user</name>\n  </author>\n  <generator
+uri="https://blog.hatena.ne.jp/"
+version="71fb73e6d6c956b9102ef2032baf0a1c">Hatena::Blog</generator>\n
+<id>hatenablog://blog/10257846132688738692</id>\n\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688741004</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688741004"/>\n
+<link
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry?page=1524062181"
+rel="next"/>
+<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022220"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b7</title>\n<updated>2018-12-23T02:22:20+09:00</updated>\n<published>2018-12-23T02:22:20+09:00</published>\n<app:edited>2018-12-23T02:22:20+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b7\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b7\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b7\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<category
+term="\xe3\x83\x96\xe3\x83\xad\xe3\x82\xb0" />\n\n<app:control>\n
+<app:draft>no</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688740755</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688740755"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022152"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b6</title>\n<updated>2018-12-23T02:21:52+09:00</updated>\n<published>2018-12-23T02:21:52+09:00</published>\n<app:edited>2018-12-23T02:21:52+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b6\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b6\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b6\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<category
+term="\xe6\x8a\x80\xe8\xa1\x93\xe8\xa8\x98\xe4\xba\x8b" />\n\n<app:control>\n
+<app:draft>yes</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688740611</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688740611"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022137"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b5</title>\n<updated>2018-12-23T02:21:37+09:00</updated>\n<published>2018-12-23T02:21:37+09:00</published>\n<app:edited>2018-12-23T02:21:37+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b5\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b5\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b5\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<app:control>\n
+<app:draft>yes</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688740502</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688740502"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022124"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b4</title>\n<updated>2018-12-23T02:21:24+09:00</updated>\n<published>2018-12-23T02:21:24+09:00</published>\n<app:edited>2018-12-23T02:21:24+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b4\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b4\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b4\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<category
+term="Python" />\n\n<app:control>\n
+<app:draft>no</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688740370</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688740370"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022108"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b3</title>\n<updated>2018-12-23T02:21:08+09:00</updated>\n<published>2018-12-23T02:21:08+09:00</published>\n<app:edited>2018-12-23T02:21:08+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b3\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b3\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b3\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<category
+term="\xe3\x83\x96\xe3\x83\xad\xe3\x82\xb0" />\n\n<category
+term="\xe6\x8a\x80\xe8\xa1\x93\xe8\xa8\x98\xe4\xba\x8b" />\n\n<category
+term="Python" />\n\n<app:control>\n
+<app:draft>no</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688740163</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688740163"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022040"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b2</title>\n<updated>2018-12-23T02:20:40+09:00</updated>\n<published>2018-12-23T02:20:40+09:00</published>\n<app:edited>2018-12-23T02:22:01+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b2\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b2\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b2\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<category
+term="\xe6\x8a\x80\xe8\xa1\x93\xe8\xa8\x98\xe4\xba\x8b" />\n\n<app:control>\n
+<app:draft>no</app:draft>\n</app:control>\n\n  </entry>\n  \n
+<entry>\n<id>tag:blog.hatena.ne.jp,2013:blog-example_user-10257846132688738692-10257846132688739869</id>\n<link
+rel="edit"
+href="https://blog.hatena.ne.jp/example_user/example-blog.hatenadiary.com/atom/entry/10257846132688739869"/>\n<link
+rel="alternate" type="text/html"
+href="https://example-blog.hatenadiary.com/entry/2018/12/23/022006"/>\n<author><name>example_user</name></author>\n<title>\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b1</title>\n<updated>2018-12-23T02:20:06+09:00</updated>\n<published>2018-12-23T02:20:06+09:00</published>\n<app:edited>2018-12-23T02:20:06+09:00</app:edited>\n<summary
+type="text">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b1\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</summary>\n<content
+type="text/x-markdown">\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b1\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84</content>\n<hatena:formatted-content
+type="text/html"
+xmlns:hatena="http://www.hatena.ne.jp/info/xmlns#">&lt;p&gt;\xe3\x83\x86\xe3\x82\xb9\xe3\x83\x88\xe7\x94\xa8\xe3\x81\xae\xe8\xa8\x98\xe4\xba\x8b1\xe3\x81\xae\xe3\x82\xb3\xe3\x83\xb3\xe3\x83\x86\xe3\x83\xb3\xe3\x83\x84&lt;/p&gt;\n</hatena:formatted-content>\n\n<app:control>\n
+<app:draft>no</app:draft>\n</app:control>\n\n  </entry>\n  \n</feed>\n

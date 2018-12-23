@@ -1,4 +1,5 @@
 import datetime
+import urllib
 
 from dateutil import parser
 import requests
@@ -60,6 +61,7 @@ class Collection:
         self.category = category
         self.client = client
         self.entries = []
+        self.next_page = None
         self._parse_xml()
 
     def _parse_xml(self):
@@ -67,6 +69,14 @@ class Collection:
             return
 
         soup = BeautifulSoup(self._xml, 'html.parser')
+
+        # parse meta data from collection
+        next_page_soup = soup.find('link', rel='next')
+        if next_page_soup:
+            query = urllib.parse.urlparse(next_page_soup['href']).query
+            self.next_page = urllib.parse.parse_qs(query)['page'][0]
+
+        # parse each entry
         soup_entries = soup.find_all('entry')
         for soup_entry in soup_entries:
             entry = Entry(
@@ -92,6 +102,7 @@ class Collection:
 
             self.entries.append(entry)
 
+
     @property
     def public_entries(self):
         return [ entry for entry in self.entries if entry.is_public]
@@ -102,7 +113,8 @@ class Collection:
 
     @property
     def next(self):
-        return self.client.get_collection()
+        if self.next_page:
+            return self.client.get_collection(page=self.next_page)
 
 class Client:
     def __init__(self, hatena_id, blog_id, api_key):
@@ -112,8 +124,11 @@ class Client:
         self.session = requests.session()
         self.endpoint = HATENA_ATOM_ENDPOINT.format(hatena_id=self.hatena_id, blog_id=self.blog_id)
 
-    def get_collection(self, category=None):
-        response = self.session.get(self.endpoint+'/entry', auth=(self.hatena_id, self.api_key))
+    def get_collection(self, category=None, page=None):
+        params = {}
+        if page:
+            params['page'] = page
+        response = self.session.get(self.endpoint+'/entry', params=params, auth=(self.hatena_id, self.api_key))
         if response.status_code != 200:
             raise InvalidRequestsError
         return Collection(xml=response.content, category=category, client=self)

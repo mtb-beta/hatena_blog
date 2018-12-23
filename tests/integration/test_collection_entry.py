@@ -44,3 +44,16 @@ class TestSenarioCollectEntry(unittest.TestCase):
             entries = collection.public_entries
             for entry in entries:
                 self.assertTrue(entry.is_public)
+
+    def test_get_next(self):
+        with self.recorder.use_cassette('test_get_next', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
+            entries = collection.entries
+            self.assertTrue(len(entries) > 0)
+            next_entries = collection.next.entries
+            for entry in next_entries:
+                self.assertIsInstance(entry, hatena_blog.Entry)
+
+            self.assertNotEqual(entries, next_entries)
+
+

@@ -130,10 +130,24 @@ class TestCollection(unittest.TestCase):
 
     @mock.patch('requests.Session.get')
     def test_collection_next(self, requests_get):
-        """正常系"""
+        """正常系(次がないケース)"""
         with open(
                 os.path.join(os.path.dirname(__file__),
                 'data/collection_case1.xml'), 'r') as f:
+            response_data = f.read()
+        requests_get.return_value.status_code = 200
+        requests_get.return_value.content = response_data
+
+        collection = self.client.get_collection()
+
+        self.assertNotIsInstance(collection.next, hatena_blog.Collection)
+
+    @mock.patch('requests.Session.get')
+    def test_collection_next(self, requests_get):
+        """正常系(次があるケース)"""
+        with open(
+                os.path.join(os.path.dirname(__file__),
+                'data/collection_case_has_next.xml'), 'r') as f:
             response_data = f.read()
         requests_get.return_value.status_code = 200
         requests_get.return_value.content = response_data
