@@ -15,50 +15,32 @@ CASSETTE_LIBRARY_DIR = "cassettes/"
 betamax.Betamax.register_serializer(pretty_json.PrettyJSONSerializer)
 
 class TestSenarioCollectEntry(unittest.TestCase):
-    def test_get_entries(self):
-
-        client = hatena_blog.Client(
+    def setUp(self):
+        self.client = hatena_blog.Client(
                         hatena_id=HATENA_ID,
                         blog_id=HATENA_BLOG_ID,
                         api_key=HATENA_API_KEY)
-        recorder = betamax.Betamax(
-            client.session, cassette_library_dir=CASSETTE_LIBRARY_DIR
+        self.recorder = betamax.Betamax(
+            self.client.session, cassette_library_dir=CASSETTE_LIBRARY_DIR
         )
 
-        with recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
-            collection = client.get_collection()
+    def test_get_entries(self):
+        with self.recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
             entries = collection.entries
             for entry in entries:
                 self.assertIsInstance(entry, hatena_blog.Entry)
 
     def test_get_draft_entries(self):
-
-        client = hatena_blog.Client(
-                        hatena_id=HATENA_ID,
-                        blog_id=HATENA_BLOG_ID,
-                        api_key=HATENA_API_KEY)
-        recorder = betamax.Betamax(
-            client.session, cassette_library_dir=CASSETTE_LIBRARY_DIR
-        )
-
-        with recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
-            collection = client.get_collection()
+        with self.recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
             entries = collection.draft_entries
             for entry in entries:
                 self.assertFalse(entry.is_public)
 
     def test_get_public_entries(self):
-
-        client = hatena_blog.Client(
-                        hatena_id=HATENA_ID,
-                        blog_id=HATENA_BLOG_ID,
-                        api_key=HATENA_API_KEY)
-        recorder = betamax.Betamax(
-            client.session, cassette_library_dir=CASSETTE_LIBRARY_DIR
-        )
-
-        with recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
-            collection = client.get_collection()
+        with self.recorder.use_cassette('test_get_entries', serialize_with='prettyjson'):
+            collection = self.client.get_collection()
             entries = collection.public_entries
             for entry in entries:
                 self.assertTrue(entry.is_public)
